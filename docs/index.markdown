@@ -1,10 +1,31 @@
 ---
 layout: default
+title: Sturdy Pancake
+numCols: 3
 ---
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+
+## Available Books
+
+<table>
+  {% for row in site.data.books %}
+      {% assign new_row = forloop.index0 | modulo:3 %}
+      {% if forloop.first  == true%}
+        <tr>
+        <td>
+          <img src="{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+        </td>
+      {% elsif new_row == 0 %}
+        </tr>
+        <tr>
+          <td>
+            <img src="{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+          </td>
+      {% else %}
+          <td>
+            <img src="{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+          </td>
+      {% endif %}
   {% endfor %}
-</ul>
+  </tr>
+</table>
+
