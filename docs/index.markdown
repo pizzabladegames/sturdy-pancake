@@ -12,17 +12,17 @@ numCols: 3
       {% if forloop.first  == true%}
         <tr>
         <td>
-          <img src="{{ site.base_url }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+          <img src="{{ site.baseurl }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
         </td>
       {% elsif new_row == 0 %}
         </tr>
         <tr>
           <td>
-            <img src="{{ site.base_url }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+            <img src="{{ site.baseurl }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
           </td>
       {% else %}
           <td>
-            <img src="{{ site.base_url }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
+            <img src="{{ site.baseurl }}{{ row.thumbnail }}" style="width: 128px; image-rendering: pixelated;" />
           </td>
       {% endif %}
   {% endfor %}
